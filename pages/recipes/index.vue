@@ -1,22 +1,29 @@
 <template>
   <section class="recipes">
-    <article class="recipe">
-      <div class="thumbnill" style="background-image: url('https://i1.wp.com/www.eatthis.com/wp-content/uploads/2019/10/pumpkin-pad-thai-recipe.jpg?resize=640%2C360&ssl=1')"></div>
-      <div>Title</div>
-      <p>Some nice text</p>
-    </article>
-    <article class="recipe">
-      <div class="thumbnill" style="background-image: url('https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/12/10/0/WU1712H_Cauliflower-Mac-and-Cheese_s4x3.jpg.rend.hgtvcom.616.462.suffix/1580140849133.jpeg')"></div>
-      <div>Title</div>
-      <p>Some nice text</p>
-    </article>
+
+    <Recipes
+      thumbnil="https://i1.wp.com/www.eatthis.com/wp-content/uploads/2019/10/pumpkin-pad-thai-recipe.jpg?resize=640%2C360&ssl=1"
+      title="Sea Food Salad"
+      preview-text="More tested"
+    />
+    <Recipes
+      thumbnil="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2017/12/10/0/WU1712H_Cauliflower-Mac-and-Cheese_s4x3.jpg.rend.hgtvcom.616.462.suffix/1580140849133.jpeg"
+      title="Sea Food Salad 2"
+      preview-text="More tested Goog newvcasr"
+    />
   </section>
 
 </template>
 
 <script>
+import Recipes from "../../components/Recipes";
 export default {
-name: "index.vue"
+  name: "index.vue",
+  components: {Recipes},
+  comments : {
+    Recipes
+  }
+
 }
 </script>
 
@@ -27,18 +34,6 @@ name: "index.vue"
   justify-content: center;
   align-items: center;
 }
-.recipe {
-  box-sizing: border-box;
-  width: 280px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #aaa;
-  margin: 10px;
-}
-.thumbnill {
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 200px;
-}
+
+
 </style>
